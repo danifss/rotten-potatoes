@@ -18,3 +18,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PWD }}
+
+      - name: Docker build and Push
+        uses: build-push@v2.10.0
+        with:
+          context: ./src
+          file: ./src/Dockerfile
+          push: true
+          tags: |
+            danifss/rotten-potatoes:latest
+            danifss/rotten-potatoes:v${{ github.run_number }}
