@@ -1,0 +1,14 @@
+mongodb:
+  image: mongo
+  tag: 5.0.5
+  user: mongouser
+  password: mongopwd
+
+web:
+  image: danifss/rotten-potatoes
+  tag: latest
+  replicas: 3
+  mongoDatabase: admin
+  service:
+    type: NodePort
+    nodePort: 30000

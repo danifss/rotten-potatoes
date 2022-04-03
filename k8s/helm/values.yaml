@@ -1,0 +1,7 @@
+web:
+  service:
+    type: LoadBalancer
+
+# helm install web ./helm-rotten-potatoes --values values.yaml
+# OR
+# helm install web ./helm-rotten-potatoes --set web.servie.type=LoadBalancer

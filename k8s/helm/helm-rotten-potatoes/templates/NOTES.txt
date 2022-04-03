@@ -1,0 +1,4 @@
+Release {{ .Release.Name }} aplicado com sucesso!
+Para aceder, verifique com o comando:
+
+kubectl get service {{ .Release.Name }}-movies
