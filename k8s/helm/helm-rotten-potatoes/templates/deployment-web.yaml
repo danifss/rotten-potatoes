@@ -11,6 +11,9 @@ spec:
     metadata:
       labels:
         app: {{ .Chart.Name }}-{{ .Release.Name }}-movies
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "5000"
     spec:
       containers:
       - name: movies
